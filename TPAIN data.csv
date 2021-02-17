@@ -1,4 +1,4 @@
-X,ID,Intercept,umol.L.sec (slope),Temp.C,Date,Run,Species,Temp.Cat,Light_Dark,Organism.ID,Species.Fullname,Blank,Surface.Area,Buoyant.Weight,Treatment,Mean,RMSE,R2,Std Error Slope,Std Error Intercept,t Ratio Slope,t Ratio Intercept,Prob>|t| Slope,Prob>|t| Intercept
+X,ID,Intercept,umol.L.sec,Temp.C,Date,Run,Species,Temp.Cat,Light_Dark,Organism.ID,Species.Fullname,Blank,Surface.Area,Buoyant.Weight,Treatment,Mean,RMSE,R2,Std Error Slope,Std Error Intercept,t Ratio Slope,t Ratio Intercept,Prob>|t| Slope,Prob>|t| Intercept
 2,G139_Por2_TP_0.2,94.58190344,0.023332854,30,02/16/2021,NA,Por,30,Light,Por2,Porites,0,5,10,0,120.32125,0.051487574,0.999980981,7.19534E-05,0.083444936,324.2771854,1133.464872,9.50957E-06,7.78365E-07
 3,G182_Por5_TP_0.1,126.9810901,-0.01829846,30,02/16/2021,NA,Por,30,Dark,Por5,Porites,0,5,10,0,87.608,0.029935942,0.999980365,5.73353E-05,0.124274004,-319.1481616,1021.783206,9.81768E-06,9.57815E-07
 4,R108_Por6_TP_0.2,84.0535068,0.027066282,30,02/16/2021,NA,Por,30,Light,Por6,Porites,0,5,10,0,112.44425,0.066740562,0.999976647,9.24885E-05,0.1025932,292.6447049,819.2892606,1.16765E-05,1.48979E-06
