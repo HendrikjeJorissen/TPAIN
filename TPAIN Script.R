@@ -1,33 +1,36 @@
-#Title: Photosynthesis and Respiration Calculations
+##TPC curves, maps, temperature and nutrient analysis for TPAIN
 
-rm(list=ls()) #clears workspace 
+rm(list=ls())
 
-## install packages if you dont already have them in your library
-if ("devtools" %in% rownames(installed.packages()) == 'FALSE') install.packages('devtools') 
-library('devtools')
-if ("segmented" %in% rownames(installed.packages()) == 'FALSE') install.packages('segmented') 
-if ("plotrix" %in% rownames(installed.packages()) == 'FALSE') install.packages('plotrix') 
-if ("gridExtra" %in% rownames(installed.packages()) == 'FALSE') install.packages('gridExtra') 
-if ("LoLinR" %in% rownames(installed.packages()) == 'FALSE') install_github('colin-olito/LoLinR') 
-if ("lubridate" %in% rownames(installed.packages()) == 'FALSE') install.packages('lubridate') 
-if ("chron" %in% rownames(installed.packages()) == 'FALSE') install.packages('chron') 
-if ("plyr" %in% rownames(installed.packages()) == 'FALSE') install.packages('plyr') 
-if ("tidyverse" %in% rownames(installed.packages()) == 'FALSE') install.packages('tidyverse') 
+##Install packages
+# load packages
+library(nls.multstart)
+library(broom)
+library(purrr)
+library(tidyverse)
+library(nlstools)
+library(nls2)
+library(grid)
+library(gridExtra)
+library(cowplot)
+library(lubridate)
+library(directlabels)
+library(rgdal)
+library(rgeos)
+library(ggthemes)
+library(ggsn)
+library(sp)
+library(ggrepel)
+library(raster)
+library(rgdal)
+library(patchwork)
+#load data
 
+photo.data <- read.csv("TPAIN data.csv")
+photo.data$X <- NULL
+View(photo.data)
+glimpse(photo.data)
 
-#Read in required libraries
-##### Include Versions of libraries
-#install_github('colin-olito/LoLinR')
-library("ggplot2")
-library("segmented")
-library("plotrix")
-library("gridExtra")
-library("LoLinR")
-library("lubridate")
-library("chron")
-library('plyr')
-library('tidyverse')
-
-#Load Sample Info
-#Sample.Info <- read.csv(file=paste0(path.p,"/../Panama MetaData/Nubbin_Sample_Info_T0_Panama_QC.csv"), header=T) #read sample.info data
-Sample.Info <- read.csv(file=paste0(path.p,"/../metadata.csv"), header=T) #read sample.info data
+#decide color scheme for the plots
+#cols<-c("#99817b", "#F2C3A7", "#FEF3E1", "#C489B9")
+cols<-c("#073e3e", "#c35119", "#f896b0", "#e4e0ca")
